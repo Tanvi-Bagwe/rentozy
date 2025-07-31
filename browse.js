@@ -29,7 +29,7 @@ function displayHouses(data) {
         div.innerHTML = `
         <h3>${house.title}</h3>
         <p><strong>Location:</strong> ${house.location}</p>
-        <p><strong>Price:</strong> $${house.price}</p>
+        <p><strong>Price:</strong> &euro; ${house.price}</p>
         <p>${house.description}</p>
       `;
         container.appendChild(div);
@@ -41,7 +41,7 @@ displayHouses(house);
 
 
 
-function addHouse() {
+/* function addHouse() {
 
     if (house.length < 4)
         var newHouse = house.push({
@@ -51,7 +51,7 @@ function addHouse() {
             description: "Spacious 3 BHK semi-detached house near city centre."
         });
     displayHouses(house);
-}
+} */
 
 
 
@@ -93,6 +93,8 @@ function addProperty(event) {
             description: description
         })
         displayHouses(house);
+        alert("Your Property added successfully.")
+        addHome();
     }
 
 }

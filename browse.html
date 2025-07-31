@@ -7,6 +7,7 @@
     <title>RENTOZY</title>
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="browse.css">
 
 </head>
 
@@ -21,31 +22,31 @@
         <nav class="nav">
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="browse.html">Browes</a></li>
-                <li><a href="post.html">Add a Property</a></li>
+                <li><a href="browse.html">Browse</a></li>
+                <li><a href="#post">Add a Property</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
     </header>
     <section class="browse-section">
         <div id="browse-container"></div>
-        <button onclick="addHouse()">ADD</button>
+        <button onclick="addHome()" id="post">ADD YOUR PROPERTY</button>
     </section>
 
-    <form>
-        <label for="ftitle">title : </label>
+    <form id="add">
+        <label for="ftitle">Title : </label>
         <input type="text" name="ftitle" id="ftitle"><br>
 
-        <label for="flocation">location : </label>
+        <label for="flocation">Location : </label>
         <input type="text" name="flocation" id="flocation"><br>
 
-        <label for="fprice">price : </label>
+        <label for="fprice">Price : </label>
         <input type="number" name="fprice" id="fprice"><br>
 
-        <label for="fdescription">description : </label>
+        <label for="fdescription">Description : </label>
         <input type="text" name="fdescription" id="fdescription"><br>
 
-        <button onclick="addProperty()"> SUBMIT </button>
+        <button onclick="addProperty(event)" type="submit" value="submit" id="submit"> SUBMIT </button>
     </form>
 
     <footer id="contact" class="site-footer">
@@ -60,16 +61,16 @@
             <div class="footer-links">
                 <h4>Connect with us</h4>
                 <a href="https://wa.me/1234567890" target="_blank">
-                    <img src="static/images/icons/whatsapp.png" alt="WhatsApp"> WhatsApp
+                    <img src="static/whatsapp.png" alt="WhatsApp"> WhatsApp
                 </a>
                 <a href="https://instagram.com/" target="_blank">
-                    <img src="static/images/icons/instagram.png" alt="Instagram"> Instagram
+                    <img src="static/instagram.png" alt="Instagram"> Instagram
                 </a>
                 <a href="mailto:tanvibagwe97@gmail.com">
-                    <img src="static/images/icons/mail.png" alt="Email"> Email
+                    <img src="static/mail.png" alt="Email"> Email
                 </a>
                 <a href="tel:+1234567890" class="contact-link">
-                    <img src="static/images/icons/phone-call.png" alt="Phone Icon">
+                    <img src="static/phone-call.png" alt="Phone Icon">
                     Call
                 </a>
             </div>
