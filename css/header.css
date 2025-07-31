@@ -14,7 +14,7 @@ header {
     color: white;
 }
 
-.site-header {
+.custom-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,15 +39,18 @@ header {
     gap: 20px;
 }
 
-.nav-links li a {
+.nav-links li button {
     color: white;
     text-decoration: none;
     font-weight: bold;
     padding: 8px;
+    background: none;
+    border: none;
 }
 
-.nav-links li a:hover {
+.nav-links li button:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
