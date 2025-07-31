@@ -45,7 +45,7 @@ let listingsData = [
 ];
 
 
-let section = document.getElementById("listings-section");
+let section = document.getElementById("listings-container");
 
 function displayHouses(data) {
     section.innerHTML = "";

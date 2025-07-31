@@ -1,3 +1,6 @@
+.listings{
+    display: none;
+}
 .listings-section{
     display: flex;
     flex-wrap: wrap;

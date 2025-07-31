@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/header.css"/>
     <link rel="stylesheet" href="css/banner.css">
     <link rel="stylesheet" href="css/listings.css "/>
+    <link rel="stylesheet" href="css/add-property.css"/>
 
     <!--    <link rel="stylesheet" href="css/browse.css">-->
     <link rel="stylesheet" href="css/footer.css"/>
@@ -32,7 +33,7 @@
                 <button onclick="navigateTo('listings')">Listings</button>
             </li>
             <li>
-                <button>Add a Property</button>
+                <button onclick="navigateTo('add-property')">Add a Property</button>
             </li>
             <li>
                 <button>Contact Us</button>
@@ -40,15 +41,18 @@
         </ul>
     </nav>
 </header>
-<section id="home" class="banner-section">
+<section class="banner-section">
     <div class="banner-content">
         <h2>WLCOME TO RENTOZY</h2>
         <p>Find or post ads of your cozy rental properties...</p>
     </div>
 </section>
-<section id="listings-section" class="listings-section">
+<section id="listings" class="listings">
+    <div class="listings-section" id="listings-container"></div>
 </section>
-
+<section id="add-property" class="add-property-section">
+    <h1> ADD PROPERTY</h1>
+</section>
 
 <footer id="contact" class="site-footer">
     <div class="footer-container">
@@ -87,12 +91,6 @@
 </body>
 
 </html>
-
-
-
-
-
-
 
 
 <!--    <section class="browse-section">-->
