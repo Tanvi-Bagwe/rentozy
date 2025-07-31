@@ -8,6 +8,7 @@ function navigateTo(route) {
 }
 let activeSection;
 function loadPage() {
+
     if(activeSection){
         activeSection.style.display = 'none';
     }

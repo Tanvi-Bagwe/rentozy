@@ -1,7 +1,14 @@
-.listings{
+.listings {
     display: none;
 }
-.listings-section{
+
+.teams-grid-header {
+    text-align: center;
+    margin: 40px 0 0 0;
+    color: #8a2853;
+}
+
+.listings-section {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -9,7 +16,7 @@
     margin: 20px 0;
 }
 
-.listings-item{
+.listings-item {
     width: 30%;
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
@@ -18,4 +25,23 @@
     border-radius: 4px;
     text-align: left;
     padding: 20px;
+}
+
+
+.add-listing-button {
+    text-align: center;
+    padding: 12px 30px;
+    border: none;
+    background-color: #00175f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.listing-button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
