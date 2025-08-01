@@ -1,4 +1,3 @@
-
 let listingsData = [
     {
         title: "2 BHK Apartment in Dublin",
@@ -44,10 +43,15 @@ let listingsData = [
     }
 ];
 
-
+let errorMessage = '';
+let addPropertyForm = document.getElementById('add-property-form');
 let section = document.getElementById("listings-container");
+let propertyTitleInput = document.getElementById('title');
+let propertyLocationInput = document.getElementById('location');
+let propertyPriceInput = document.getElementById('price');
+let propertyDescriptionInput = document.getElementById('description');
 
-function displayHouses(data) {
+function displayHouses(data, showPropertyAddedPopup) {
     section.innerHTML = "";
     data.forEach(house => {
         const div = document.createElement("div");
@@ -61,6 +65,65 @@ function displayHouses(data) {
         section.appendChild(div);
 
     });
+
+    if (showPropertyAddedPopup) {
+        alert("New property added at the end of the list")
+    }
 }
 
-displayHouses(listingsData);
+displayHouses(listingsData, false);
+
+function showAddPropertyForm() {
+    addPropertyForm.classList.add('visible');
+}
+
+function hideAddPropertyForm() {
+    addPropertyForm.reset();
+    addPropertyForm.classList.remove('visible');
+
+}
+
+function submitForm() {
+    let errorMessageContainer = document.getElementById('errorMessage');
+    errorMessage = '';
+    errorMessageContainer.innerHTML = errorMessage;
+    if (propertyTitleInput === undefined || propertyTitleInput == null || propertyTitleInput.value === '' || propertyTitleInput.value.length < 5) {
+        errorMessage = 'Please enter a valid title. It should be at least 5 characters long.';
+    } else if (propertyLocationInput === undefined || propertyLocationInput == null || propertyLocationInput.value === '' || propertyLocationInput.value.length < 3) {
+        errorMessage = 'Please enter a valid location. It should be at least 3 characters long.';
+    } else if (propertyPriceInput === undefined || propertyPriceInput == null || propertyPriceInput.value === '') {
+        errorMessage = 'Please enter a valid price. It should be a number.';
+    } else if (propertyDescriptionInput === undefined || propertyDescriptionInput == null || propertyDescriptionInput.value === '' || propertyDescriptionInput.value.length < 20) {
+        errorMessage = 'Please enter a valid description. It should be at least 20 characters long.';
+    }
+
+    errorMessageContainer.innerHTML = errorMessage;
+
+    if (errorMessage.length === 0) {
+        let newProperty = {
+            title: propertyTitleInput.value,
+            location: propertyLocationInput.value,
+            price: propertyPriceInput.value,
+            description: propertyDescriptionInput.value
+        }
+
+        let propertyAlreadyExists = false;
+
+        for (const element of listingsData) {
+            if (element.title === newProperty.title) {
+                propertyAlreadyExists = true;
+                break;
+            }
+        }
+
+        if (propertyAlreadyExists) {
+            errorMessage = 'Property with the same title already exists, please enter a new valid title';
+            errorMessageContainer.innerHTML = errorMessage;
+        } else {
+            hideAddPropertyForm();
+            listingsData.push(newProperty);
+            displayHouses(listingsData, true);
+        }
+    }
+
+}

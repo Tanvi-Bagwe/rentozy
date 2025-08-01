@@ -45,3 +45,10 @@
     display: flex;
     justify-content: center;
 }
+
+.error-message{
+    display: block;
+    padding-bottom: 5px;
+    color: red;
+    font-size: 14px;
+}
