@@ -27,6 +27,3 @@ function loadPage() {
 window.addEventListener('hashchange', loadPage);
 window.addEventListener('load', loadPage);
 
-
-
-// displayHouses(listingsData);

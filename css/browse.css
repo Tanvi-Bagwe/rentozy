@@ -2,7 +2,7 @@
     background-color: #8A2853;
     width: 250px;
     display: block;
-    margin: 0px auto;
+    margin: 0 auto;
     border: none;
     border-radius: 5px;
     font-weight: bold;
@@ -51,7 +51,7 @@ input {
     background-color: #8A2853;
     width: 180px;
     display: block;
-    margin: 0px auto;
+    margin: 0 auto;
     border: none;
     border-radius: 5px;
     font-weight: bold;
