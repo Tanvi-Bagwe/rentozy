@@ -1,4 +1,4 @@
-const images = ["static-content/gallery-images/1.jpg", "static-content/gallery-images/2.jpg", "/static-content/gallery-images/3.jpg", "/static-content/gallery-images/4.jpg", "/static-content/gallery-images/5.jpg"]
+const images = ["static-content/gallery-images/1.jpg", "static-content/gallery-images/2.jpg", "static-content/gallery-images/3.jpg", "static-content/gallery-images/4.jpg", "static-content/gallery-images/5.jpg"]
 
 let current = 0;
 
