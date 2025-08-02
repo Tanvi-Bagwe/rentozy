@@ -51,6 +51,7 @@
 .add-property-form button:hover {
     background-color: #0a9396;
 }
+
 .contact-links {
     margin-top: 20px;
     text-align: center;
@@ -88,7 +89,8 @@
     height: 30px;
     vertical-align: middle;
 }
-.cancel-button{
+
+.cancel-button {
     background: red !important;
 }
 

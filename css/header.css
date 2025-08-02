@@ -9,16 +9,11 @@
     font-weight: bold;
 }
 
-header {
-    background-color: #8A2853;
-    color: white;
-}
-
 .custom-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #8A2853;
+    background-color: #007bff;
     color: white;
     padding: 0 20px;
     flex-wrap: wrap;

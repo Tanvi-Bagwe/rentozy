@@ -2,7 +2,7 @@
     display: none;
 }
 
-.teams-grid-header {
+.section-header {
     text-align: center;
     margin: 40px 0 0 0;
     color: #8a2853;
@@ -17,7 +17,7 @@
 }
 
 .listings-item {
-    width: 30%;
+    width: 400px;
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -46,19 +46,21 @@
     justify-content: center;
 }
 
-.error-message{
+.error-message {
     display: block;
     padding-bottom: 5px;
     color: red;
     font-size: 14px;
 }
 
-.search-container{
+.search-container {
     display: flex;
     justify-content: center;
     margin: 10px;
+    flex-wrap: wrap;
 }
-.search-input{
+
+.search-input {
     width: 200px;
     padding: 10px;
     border: 1px solid #cccccc;
@@ -66,7 +68,7 @@
     font-size: 16px;
 }
 
-.search-button{
+.search-button {
     text-align: center;
     padding: 12px 30px;
     border: none;
@@ -79,7 +81,7 @@
     margin: 0 10px;
 }
 
-.search-clean-button{
+.search-clean-button {
     text-align: center;
     padding: 12px 30px;
     border: none;
@@ -89,9 +91,10 @@
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    gap: 10px 10px;
 }
 
-.search-result{
+.search-result {
     text-align: center;
     display: block;
 }

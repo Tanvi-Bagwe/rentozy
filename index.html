@@ -11,14 +11,14 @@
     <link rel="stylesheet" href="css/banner.css">
     <link rel="stylesheet" href="css/listings.css "/>
     <link rel="stylesheet" href="css/add-property.css"/>
+    <link rel="stylesheet" href="css/gallery.css"/>
     <link rel="stylesheet" href="css/footer.css"/>
-    <link rel="stylesheet" href="css/add-property.css">
 </head>
 
 <body>
 <header class="custom-header">
     <div class="logo">
-        <a href="#"><img src="static-content/business-house-logo-free-png.webp" alt="Rentozy Logo"/></a>
+        <a href="#home"><img src="static-content/house.png" alt="Rentozy Logo"/></a>
     </div>
     <button class="menu-toggle" onclick="showAndHideMenu()" aria-label="Toggle navigation">
         &#9776;
@@ -32,27 +32,39 @@
                 <button onclick="navigateTo('listings')">Listings</button>
             </li>
             <li>
-                <button>Contact Us</button>
+                <button onclick="navigateTo('gallery')">Gallery</button>
             </li>
         </ul>
     </nav>
 
 </header>
-<section class="banner-section">
-    <div class="banner-content">
-        <h2>WELCOME TO RENTOZY</h2>
-        <p>Find or post ads of your cozy rental properties...</p>
-    </div>
+<section id="home" class="home">
+    <section class="banner-section">
+        <div class="banner-content">
+            <h2>WELCOME TO RENTOZY</h2>
+            <p>Find or post ads of your cozy rental properties...</p>
+        </div>
+    </section>
+    <section class="homepage-section">
+        <p>Your trusted platform to discover, list, and rent properties with ease. Whether you're a landlord looking to
+            showcase your home or a tenant searching for the perfect place, Rentozy simplifies the rental process for
+            everyone.</p>
+        <p>Browse listings from across Ireland, view property details, and connect directly with owners. Fast,
+            transparent, and secure - that's our promise to you.</p>
+        <button onclick="navigateTo('listings')">Explore Listings</button>
+    </section>
 </section>
+
 <section id="listings" class="listings">
-    <h2 class="teams-grid-header" id="teams-grid">Property Listings</h2>
+    <h2 class="section-header" id="teams-grid">Property Listings</h2>
     <div class="listing-button-container">
         <button class="add-listing-button" onclick="showAddPropertyForm()">Add Property</button>
     </div>
-    <div >
+    <div>
         <div class="search-container">
-            <input type="text" id="search-input" class="search-input" name="title" placeholder="3 BHK Semi-Detached House in...">
-            <button class="search-button"  onclick='searchListings()'>Search</button>
+            <input type="text" id="search-input" class="search-input" name="title"
+                   placeholder="3 BHK Semi-Detached House in...">
+            <button class="search-button" onclick='searchListings()'>Search</button>
             <button class="search-clean-button" onclick="clearSearch()">Clear</button>
         </div>
         <span id="search-result" class="search-result"></span>
@@ -81,6 +93,19 @@
     <div class="listings-section" id="listings-container"></div>
 </section>
 
+<section id="gallery" class="gallery">
+    <h2 class="section-header">Gallery</h2>
+
+    <div id="gallery-container">
+        <img id="gallery-image" src="static-content/gallery-images/1.jpg" alt="Property">
+
+        <div class="gallery-controls">
+            <button id="prev-btn">⟨</button>
+            <button id="next-btn">⟩</button>
+        </div>
+    </div>
+</section>
+
 <footer id="contact" class="site-footer">
     <div class="footer-container">
         <div class="footer-address">
@@ -101,7 +126,7 @@
             <a href="mailto:tanvibagwe97@gmail.com">
                 <img src="static-content/mail.png" alt="Email"> Email
             </a>
-            <a href="tel:+1234567890" class="contact-link">
+            <a href="tel:+1234567890">
                 <img src="static-content/phone-call.png" alt="Phone Icon">
                 Call
             </a>
@@ -114,6 +139,7 @@
 
 <script src="js/main.js"></script>
 <script src="js/listings.js"></script>
+<script src="js/gallery.js"></script>
 </body>
 
 </html>
