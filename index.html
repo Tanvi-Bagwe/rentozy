@@ -4,6 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rentozy is your trusted platform to discover, list, and rent properties in Ireland. Find your cozy home with ease.">
+    <link rel="icon" type="image/x-icon" href="static-content/favicon.png">
+    <meta property="og:title" content="RENTOZY - Find Your Next Home">
+    <meta property="og:description" content="Your trusted platform to discover, list, and rent properties in Ireland with ease.">
+    <meta property="og:image" content="static-content/house.png">
+    <meta property="og:url" content="https://tanvi-bagwe.github.io/rentozy/">
+
+
     <title>RENTOZY</title>
 
     <link rel="stylesheet" href="css/style.css"/>
@@ -18,7 +26,7 @@
 <body>
 <header class="custom-header">
     <div class="logo">
-        <a href="#home"><img src="static-content/house.png" alt="Rentozy Logo"/></a>
+        <a href="#home"><img src="static-content/logo.png" alt="Rentozy Logo"/></a>
     </div>
     <button class="menu-toggle" onclick="showAndHideMenu()" aria-label="Toggle navigation">
         &#9776;
@@ -56,13 +64,13 @@
 </section>
 
 <section id="listings" class="listings">
-    <h2 class="section-header" id="teams-grid">Property Listings</h2>
+    <h2 class="section-header">Property Listings</h2>
     <div class="listing-button-container">
         <button class="add-listing-button" onclick="showAddPropertyForm()">Add Property</button>
     </div>
     <div>
         <div class="search-container">
-            <input type="text" id="search-input" class="search-input" name="title"
+            <input type="text" id="search-input" class="search-input" name="search-query"
                    placeholder="3 BHK Semi-Detached House in...">
             <button class="search-button" onclick='searchListings()'>Search</button>
             <button class="search-clean-button" onclick="clearSearch()">Clear</button>
