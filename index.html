@@ -49,6 +49,14 @@
     <div class="listing-button-container">
         <button class="add-listing-button" onclick="showAddPropertyForm()">Add Property</button>
     </div>
+    <div >
+        <div class="search-container">
+            <input type="text" id="search-input" class="search-input" name="title" placeholder="3 BHK Semi-Detached House in...">
+            <button class="search-button"  onclick='searchListings()'>Search</button>
+            <button class="search-clean-button" onclick="clearSearch()">Clear</button>
+        </div>
+        <span id="search-result" class="search-result"></span>
+    </div>
     <section class="add-property">
         <form class="add-property-form" id="add-property-form">
 
@@ -107,7 +115,5 @@
 <script src="js/main.js"></script>
 <script src="js/listings.js"></script>
 </body>
-
-
 
 </html>

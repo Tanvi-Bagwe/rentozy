@@ -50,6 +50,7 @@ let propertyTitleInput = document.getElementById('title');
 let propertyLocationInput = document.getElementById('location');
 let propertyPriceInput = document.getElementById('price');
 let propertyDescriptionInput = document.getElementById('description');
+let searchResultContainer = document.getElementById('search-result');
 
 function displayHouses(data, showPropertyAddedPopup) {
     section.innerHTML = "";
@@ -126,4 +127,39 @@ function submitForm() {
         }
     }
 
+}
+
+function searchListings() {
+    let searchInputElement = document.getElementById("search-input");
+
+    let searchResultText;
+    if (searchInputElement === undefined || searchInputElement.value === '' || searchInputElement.value.length < 3) {
+        searchResultText = 'Please enter at least 3 characters for searching through the properties';
+        searchResultContainer.innerHTML = searchResultText;
+
+    } else {
+
+        let foundValues = [];
+
+        for (const data of listingsData) {
+            if (data.title.toLowerCase().includes(searchInputElement.value.toLowerCase())
+                || data.description.toLowerCase().includes(searchInputElement.value.toLowerCase())
+                || data.location.toLowerCase().includes(searchInputElement.value.toLowerCase())) {
+                foundValues.push(data);
+            }
+        }
+
+        searchResultText = 'Found ' + foundValues.length + ' Results';
+
+        searchResultContainer.innerHTML = searchResultText;
+        displayHouses(foundValues, false);
+    }
+}
+
+function clearSearch() {
+    searchResultContainer.innerHTML = '';
+    let searchInputElement = document.getElementById("search-input");
+    searchInputElement.value = '';
+
+    displayHouses(listingsData, false);
 }
